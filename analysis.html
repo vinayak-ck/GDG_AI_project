@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerReady | Skill Gap Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .skill-missing {
+            background-color: #fee2e2;
+            border-left: 4px solid #ef4444;
+        }
+        .skill-partial {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+        }
+        .skill-complete {
+            background-color: #dcfce7;
+            border-left: 4px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="dashboard.html" class="text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">CareerReady</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-bell text-xl"></i>
+                </a>
+                <div class="relative group">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Analysis Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">Skill Gap Analysis</h1>
+                <p class="text-gray-600">Software Engineer at TechCorp</p>
+            </div>
+            <div class="bg-blue-50 text-blue-800 px-4 py-2 rounded-md">
+                <span class="font-medium">Readiness Score:</span> 60%
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Summary</h2>
+                <p class="text-gray-600 mt-2">You're 60% ready for this role. Focus on the missing skills below to improve your readiness.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="p-6 text-center">
+                    <div class="text-3xl font-bold text-red-500">5</div>
+                    <div class="text-gray-600">Missing Skills</div>
+                </div>
+                <div class="p-6 text-center">
+                    <div class="text-3xl font-bold text-yellow-500">3</div>
+                    <div class="text-gray-600">Partially Covered</div>
+                </div>
+                <div class="p-6 text-center">
+                    <div class="text-3xl font-bold text-green-500">7</div>
+                    <div class="text-gray-600">Complete Skills</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Current Skills -->
+            <div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Your Current Skills</h2>
+                    <div class="space-y-3">
+                        <!-- Skill 1 -->
+                        <div class="skill-complete p-3 rounded">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Complete</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-1">5 years experience</div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div class="skill-complete p-3 rounded">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Complete</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-1">5 years experience</div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div class="skill-partial p-3 rounded">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">React</span>
+                                <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Partial</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-1">Need more advanced patterns</div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div class="skill-missing p-3 rounded">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">GraphQL</span>
+                                <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Missing</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-1">Not in your skill set</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Required Skills -->
+            <div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Required Skills for Role</h2>
+                    <div class="space-y-3">
+                        <!-- Skill 1 -->
+                        <div class="p-3 rounded bg-gray-50">
+                            <div class="font-medium">JavaScript</div>
+                            <div class="text-sm text-gray-600 mt-1">Advanced level required</div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div class="p-3 rounded bg-gray-50">
+                            <div class="font-medium">React</div>
+                            <div class="text-sm text-gray-600 mt-1">Including hooks and context API</div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div class="p-3 rounded bg-gray-50">
+                            <div class="font-medium">GraphQL</div>
+                            <div class="text-sm text-gray-600 mt-1">Basic understanding required</div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div class="p-3 rounded bg-gray-50">
+                            <div class="font-medium">TypeScript</div>
+                            <div class="text-sm text-gray-600 mt-1">Strongly preferred</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Section -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Recommended Actions</h2>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-book text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Take GraphQL Fundamentals Course</h3>
+                        <p class="text-sm text-gray-600">Estimated time: 15 hours</p>
+                        <a href="recommendations.html" class="inline-block mt-2 text-sm text-blue-600 hover:text-blue-500">View course recommendations →</a>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-project-diagram text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Build a React + GraphQL Project</h3>
+                        <p class="text-sm text-gray-600">Apply your learning in a practical way</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <a href="recommendations.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Get Learning Path</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
